@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Family Recipes</h1>
+    
+    <section>
+         <%   for(let i = 0; i < recipes.length; i++){  %>
+                <section class="itemContainer">
+                    <section class="innerContainer">
+                        <h3>Name of Recipe:</h3> <span><%= recipes[i].name %></span>
+                    </section>
+                    <section class="innerContainer">
+                        <h4>Ingredients: </h4> <p><%= recipes[i].ingredients %></p>
+                    </section>
+                    <section class="innerContainer">
+                        <h4>Instructions: </h4><p><%= recipes[i].instructions %></p>
+                    </section>
+                </section>
+           <% } %>
+    </section>
+
+    <form action="familyRec/createRecipe" method="POST">
+        <input type="text" placeholder="Lasanga" name="recipeName">
+        <input type="text" placeholder="Tomato sauce, pasta, cheese" name="ingred">
+        <input type="text" placeholder="Head up pasta, pour sauce and cheese. Finally Mix well and enjoy!" name="instruct">
+        <input type="submit">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color: #0E4C92;
+    color: white;
+    font-size: 25px;
+}
+
+.itemContainer{
+    border: 5px solid white;
+    color: white;
+    width: 40%;
+    margin: 0 auto;
+}
+
+h1,form{
+    text-align: center;
+}
+
+.innerContainer{
+    display: flex;
+    align-items: center;
+}
+
+h3,h4{
+    padding-right: 20px;
+}
