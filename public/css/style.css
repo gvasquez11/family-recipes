@@ -11,17 +11,30 @@ body {
 .itemContainer{
     border: 5px solid white;
     color: white;
-    width: 40%;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 10px auto;
+    border-radius: 25px;
+    padding: 10px;
+    overflow: auto;
 }
 
 h1,form{
     text-align: center;
 }
 
+.mainContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px, 0, 20px, 0;
+}
+.mainLeft, .mainRight{
+    width: 50%;
+}
+
 .innerContainer{
     display: flex;
     align-items: center;
+    overflow: auto;
 }
 
 h3,h4{
@@ -30,7 +43,7 @@ h3,h4{
 
 /* Styling for the form*/
 form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -65,3 +78,4 @@ textarea {
     input[type="submit"]:hover {
       background-color: #6693F5;
     }
+
