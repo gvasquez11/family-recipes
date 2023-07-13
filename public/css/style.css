@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     background-color: #0E4C92;
     color: white;
@@ -23,3 +27,41 @@ h1,form{
 h3,h4{
     padding-right: 20px;
 }
+
+/* Styling for the form*/
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+textarea {
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: #0080FE;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #6693F5;
+    }

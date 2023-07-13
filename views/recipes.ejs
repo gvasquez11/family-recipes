@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Recipes</title>
 </head>
 <body>
@@ -26,9 +29,16 @@
     </section>
 
     <form action="familyRec/createRecipe" method="POST">
+        <label for="dishName">Name of Recipe:</label>
         <input type="text" placeholder="Lasanga" name="recipeName">
-        <input type="text" placeholder="Tomato sauce, pasta, cheese" name="ingred">
-        <input type="text" placeholder="Head up pasta, pour sauce and cheese. Finally Mix well and enjoy!" name="instruct">
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingred" rows="4" placeholder="Tomato sauce, pasta, cheese"  required></textarea>
+        <!-- <input type="text" placeholder="Tomato sauce, pasta, cheese" name="ingred"> -->
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instruct" name="instructions" rows="6" placeholder="Heat up pasta, pour sauce and cheese. Finally Mix well and enjoy!" required></textarea>
+        <!-- <input type="text" placeholder="Heat up pasta, pour sauce and cheese. Finally Mix well and enjoy!" name="instruct"> -->
         <input type="submit">
     </form>
 
