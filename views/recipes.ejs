@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d24920b36a.js" crossorigin="anonymous"></script>
     <title>Recipes</title>
 </head>
 <body>
@@ -15,9 +17,13 @@
     <section class="mainContainer">
         <section class="mainLeft">
              <%   for(let i = 0; i < recipes.length; i++){  %>
-                    <section class="itemContainer">
+                    <section class="itemContainer" data-id="<%=recipes[i]._id %>">
                         <section class="innerContainer">
-                            <h4>Name of Recipe:</h4> <span><%= recipes[i].name %></span>
+                            <h4>Name of Recipe:</h4> <span><%= recipes[i].name %></span> 
+                            <section class="iconWrapper">
+                                <section class="fa-solid fa-trash"></section>
+                                <!-- <span class="fa-solid fa-pen-to-square"></span> -->
+                            </section>
                         </section>
                         <section class="innerContainer">
                             <h4>Ingredients: </h4> <p><%= recipes[i].ingredients %></p>
@@ -43,6 +49,6 @@
         </section>
     </section>
 
-
+    <script src="js/main.js"></script>
 </body>
 </html>

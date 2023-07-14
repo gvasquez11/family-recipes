@@ -41,6 +41,22 @@ h3,h4{
     padding-right: 20px;
 }
 
+
+/* Auto margins on flex items have an effect very similar to auto margins in block flow: During calculations of flex bases and flexible lengths,
+auto margins are treated as 0. Prior to alignment via justify-content and align-self,
+any positive free space is distributed to auto margins in that dimension. 
+https: //stackoverflow.com/questions/33924655/position-last-flex-item-at-the-end-of-container*/
+.iconWrapper{
+    display: flex;
+    margin-left: auto; 
+}
+.iconWrapper section{
+    padding: 10px;
+}
+.iconWrapper section:hover{
+    cursor: pointer;
+}
+
 /* Styling for the form*/
 form {
     max-width: 600px;
