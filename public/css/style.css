@@ -8,6 +8,20 @@ body {
     font-size: 25px;
 }
 
+.logOutContainer{
+    text-align: right;
+}
+
+#logout{
+text-decoration: none;
+color: white;
+}
+
+#logout:hover{
+cursor: pointer;
+text-decoration: underline;
+}
+
 .itemContainer{
     border: 5px solid white;
     color: white;

@@ -3,8 +3,8 @@ const Recipes = require('../models/recipe')
 module.exports = {
     getRecipes: async (req, res) => {
         try{
-            const listOfRecipes = await Recipes.find()
-            res.render('recipes.ejs', {recipes : listOfRecipes})
+            const listOfRecipes = await Recipes.find({userId:req.user.id})
+            res.render('recipes.ejs', {recipes : listOfRecipes, user: req.user})
             console.log('Retrieving Recipes...')
         }catch(err){
             console.log(err)
@@ -15,7 +15,8 @@ module.exports = {
             await Recipes.create({
                 name: req.body.recipeName,
                 ingredients: req.body.ingred,
-                instructions: req.body.instruct
+                instructions: req.body.instruct,
+                userId: req.user.id
             })
             console.log('Recipe added successfully!')
             res.redirect('/familyRec')
