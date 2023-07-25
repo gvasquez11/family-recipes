@@ -13,6 +13,10 @@
 </head>
 
 <body>
+
+    <section class="homeContainer"><a id="home" href="/">Home</a></section>
+    <section class="createContainer"> <a id="signup" href="/signup">Sign Up</a></section>
+
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el=> { %>
             <div class="alert alert-danger">

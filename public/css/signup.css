@@ -50,3 +50,20 @@ input {
     cursor: pointer;
     width: 100%;
 }
+
+.homeContainer,
+.loginContainer {
+    text-align: right;
+}
+
+#home,
+#login {
+    text-decoration: none;
+    color: white;
+}
+
+#home:hover,
+#login:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

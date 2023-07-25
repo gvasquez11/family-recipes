@@ -57,3 +57,16 @@ label {
      width: 100%;
  }
 
+.homeContainer, .createContainer {
+    text-align: right;
+}
+
+#home, #signup{
+    text-decoration: none;
+    color: white;
+}
+
+#home:hover, #signup:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
